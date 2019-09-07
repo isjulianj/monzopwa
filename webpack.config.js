@@ -6,7 +6,12 @@ module.exports = {
         rules: [
             {
                 test: /\.ts(x?)$/,
-                use: 'ts-loader',
+                use:  {
+                    loader: 'babel-loader',
+                    options: {
+                        presets: ['@babel/preset-env', '@babel/preset-react']
+                    }
+                },
                 exclude: [/node_modules/, '/babel.config.js']
             }
         ]
@@ -16,7 +21,7 @@ module.exports = {
         "react-dom": "ReactDOM"
     },
     resolve: {
-        extensions: [ '.ts','tsx', '.js' ]
+        extensions: [ '.ts', 'tsx', '.js' ]
     },
     output: {
         filename: 'bundle.js',
