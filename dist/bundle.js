@@ -86,18 +86,6 @@
 /************************************************************************/
 /******/ ({
 
-/***/ "./src/components/Hello.tsx":
-/*!**********************************!*\
-  !*** ./src/components/Hello.tsx ***!
-  \**********************************/
-/*! exports provided: Hello */
-/***/ (function(module, __webpack_exports__, __webpack_require__) {
-
-"use strict";
-eval("__webpack_require__.r(__webpack_exports__);\n/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, \"Hello\", function() { return Hello; });\n/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! react */ \"react\");\n/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(react__WEBPACK_IMPORTED_MODULE_0__);\n\nvar Hello = function Hello(props) {\n  return react__WEBPACK_IMPORTED_MODULE_0__[\"createElement\"](\"h1\", null, \"Hello from \", props.compiler, \" and \", props.framework, \"!\");\n};\n\n//# sourceURL=webpack:///./src/components/Hello.tsx?");
-
-/***/ }),
-
 /***/ "./src/index.tsx":
 /*!***********************!*\
   !*** ./src/index.tsx ***!
@@ -106,7 +94,7 @@ eval("__webpack_require__.r(__webpack_exports__);\n/* harmony export (binding) *
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
-eval("__webpack_require__.r(__webpack_exports__);\n/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! react */ \"react\");\n/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(react__WEBPACK_IMPORTED_MODULE_0__);\n/* harmony import */ var react_dom__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! react-dom */ \"react-dom\");\n/* harmony import */ var react_dom__WEBPACK_IMPORTED_MODULE_1___default = /*#__PURE__*/__webpack_require__.n(react_dom__WEBPACK_IMPORTED_MODULE_1__);\n/* harmony import */ var _components_Hello_tsx__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ./components/Hello.tsx */ \"./src/components/Hello.tsx\");\n\n\n\nreact_dom__WEBPACK_IMPORTED_MODULE_1__[\"render\"](react__WEBPACK_IMPORTED_MODULE_0__[\"createElement\"](_components_Hello_tsx__WEBPACK_IMPORTED_MODULE_2__[\"Hello\"], {\n  compiler: \"TypeScript\",\n  framework: \"React\"\n}), document.getElementById(\"example\"));\n\n//# sourceURL=webpack:///./src/index.tsx?");
+eval("__webpack_require__.r(__webpack_exports__);\n/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! react */ \"react\");\n/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(react__WEBPACK_IMPORTED_MODULE_0__);\n/* harmony import */ var react_dom__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! react-dom */ \"react-dom\");\n/* harmony import */ var react_dom__WEBPACK_IMPORTED_MODULE_1___default = /*#__PURE__*/__webpack_require__.n(react_dom__WEBPACK_IMPORTED_MODULE_1__);\n!(function webpackMissingModule() { var e = new Error(\"Cannot find module './components/Hello'\"); e.code = 'MODULE_NOT_FOUND'; throw e; }());\n\n //TODO fix this in the webpack loader\n\n\nreact_dom__WEBPACK_IMPORTED_MODULE_1__[\"render\"](react__WEBPACK_IMPORTED_MODULE_0__[\"createElement\"](!(function webpackMissingModule() { var e = new Error(\"Cannot find module './components/Hello'\"); e.code = 'MODULE_NOT_FOUND'; throw e; }()), {\n  compiler: \"TypeScript\",\n  framework: \"React\"\n}), document.getElementById(\"example\"));\n\n//# sourceURL=webpack:///./src/index.tsx?");
 
 /***/ }),
 
