@@ -6,5 +6,9 @@ export interface IProps {
 }
 
 export const LogMeIn: React.FC<IProps> = props => {
-  return <h1>Log into your account!</h1>;
+  return (
+    <div className="container">
+      <h1>Log into your account!</h1>;
+    </div>
+  );
 };
