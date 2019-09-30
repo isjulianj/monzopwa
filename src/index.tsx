@@ -1,10 +1,7 @@
-import * as React from "react";
-import * as ReactDOM from "react-dom";
+import * as React from 'react';
+import * as ReactDOM from 'react-dom';
 
 //TODO fix this in the webpack loader
-import { Hello } from "./components/Hello";
+import App from './components/App';
 
-ReactDOM.render(
-    <Hello compiler="TypeScript" framework="React" />,
-    document.getElementById("example")
-);
+ReactDOM.render(<App />, document.getElementById('AppRoot'));
