@@ -1,4 +1,6 @@
-import * as React from "react";
+import React, { useState, useEffect } from 'react';
+
+import fetchLogInCreds, { IParams } from '../helpers/fetchLogInCreds';
 
 export interface IProps {
   compiler: string;
@@ -11,6 +13,18 @@ const jumbotronBg = {
 };
 
 export const LogMeIn: React.FC<IProps> = props => {
+  const [email, setEmail] = useState('');
+  let params: IParams;
+  useEffect(() => {
+    params = {
+      client_id: email,
+      client_secret: '',
+      redirect_uri: 'http://localhost:3000/oath/callback',
+      response_type: 'code',
+      state: '229e8c0a-5daa-4017-ad2a-f9835a49f128 18'
+    };
+  }, [email]);
+
   return (
     <div className="container">
       <div
@@ -19,12 +33,32 @@ export const LogMeIn: React.FC<IProps> = props => {
       >
         <div className="container">
           <div className="p-1">
-            <h1>Log into your account!</h1>
+            <h2>Log into your account!</h2>
           </div>
           <div className="p-1">
-            <button className="btn btn-primary">
-              Sign in with your monzo account
-            </button>
+            <form action="javascript:void(0)">
+              <div className="form-group">
+                <label htmlFor="inputEmail">Email: </label>
+                <input
+                  type="text"
+                  aria-label="Email address"
+                  placeholder="you@example.com"
+                  id="inputEmail"
+                  required
+                  className="d-block"
+                  value={email}
+                  onChange={e => setEmail(e.target.value)}
+                />
+              </div>
+              <button
+                className="btn btn-primary"
+                onClick={() =>
+                  fetchLogInCreds('https://auth.monzo.com/', params)
+                }
+              >
+                Sign in with your monzo account
+              </button>
+            </form>
           </div>
         </div>
       </div>

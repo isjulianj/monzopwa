@@ -1,4 +1,4 @@
-import React from "react";
+import React from 'react';
 
 export const Header: React.FC = (props: string) => {
   return (
@@ -9,7 +9,7 @@ export const Header: React.FC = (props: string) => {
             src="//placehold.it/30x30"
             width="30"
             height="30"
-            class="d-inline-block align-top"
+            className="d-inline-block align-top"
             alt=""
           />
           &nbsp; Monzo PWA
