@@ -15,11 +15,16 @@ export default function fetchLogInCreds(url: string, params: IParams): void {
     newURL.searchParams.append(key, params[key]);
   });
 
-  fetch(newURL, {
-    method: 'GET',
-    redirect: 'follow'
-  }).then(response => {
-    console.log(response);
-    console.log(response.headers.get('Date'));
-  });
+  window.location.href = newURL;
+  // fetch(newURL, {
+  //   method: 'GET',
+  //   redirect: 'follow',
+  //   mode: 'no-cors'
+  // })
+  //   .then(response => {
+  //     response.blob();
+  //   })
+  //   .then(data => {
+  //     console.log(data);
+  //   });
 }

@@ -18,8 +18,8 @@ export const LogMeIn: React.FC<IProps> = props => {
   useEffect(() => {
     params = {
       client_id: email,
-      client_secret: '',
-      redirect_uri: 'http://localhost:3000/oath/callback',
+      // client_secret: '',
+      redirect_uri: 'http://localhost:3000/oathcallback',
       response_type: 'code',
       state: '229e8c0a-5daa-4017-ad2a-f9835a49f128 18'
     };
@@ -36,7 +36,7 @@ export const LogMeIn: React.FC<IProps> = props => {
             <h2>Log into your account!</h2>
           </div>
           <div className="p-1">
-            <form action="javascript:void(0)">
+            <form>
               <div className="form-group">
                 <label htmlFor="inputEmail">Email: </label>
                 <input
@@ -51,10 +51,10 @@ export const LogMeIn: React.FC<IProps> = props => {
                 />
               </div>
               <button
-                className="btn btn-primary"
-                onClick={() =>
-                  fetchLogInCreds('https://auth.monzo.com/', params)
-                }
+                onClick={e => {
+                  e.preventDefault();
+                  fetchLogInCreds('https://auth.monzo.com/', params);
+                }}
               >
                 Sign in with your monzo account
               </button>
